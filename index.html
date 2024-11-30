@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Desa Purworejo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav id="navbar" class="bg-green-600 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="logo text-xl font-bold">
+                <a href="/index.html" class="hover:text-gray-200 transition-colors">Desa Purworejo</a>
+            </div>
+
+            <!-- Hamburger Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="hamburger" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Menu Links -->
+            <ul id="navbar-links" class="hidden md:flex md:space-x-4 absolute md:static top-16 left-0 bg-green-600 md:bg-transparent w-full md:w-auto z-10 md:z-auto shadow-lg md:shadow-none flex-col md:flex-row">
+                <li class="border-b md:border-none"><a href="/index.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Beranda</a></li>
+                <li class="border-b md:border-none"><a href="/informasi/informasi.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Informasi Desa</a></li>
+                <li class="border-b md:border-none"><a href="/layanan/layanan.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Layanan Publik</a></li>
+                <li class="border-b md:border-none"><a href="/wisata/wisata.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Wisata Desa</a></li>
+                <li class="border-b md:border-none"><a href="/umkm/umkm.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">UMKM</a></li>
+                <li><a href="/forum/forum.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Forum</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section bg-cover bg-center h-screen" style="background-image: url('/assets/header.webp');">
+        <div class="hero-content text-center text-white flex flex-col items-center justify-center h-full bg-black bg-opacity-50">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">Selamat Datang di Desa Purworejo</h1>
+            <p class="text-lg md:text-2xl mb-6 animate-slide-up">Desa Sejahtera, Masyarakat Mandiri</p>
+            <a href="/informasi/informasi.html" class="bg-green-600 hover:bg-green-700 transition py-2 px-4 rounded-full animate-bounce">Pelajari Lebih Lanjut</a>
+        </div>
+    </header>
+
+    <!-- Sejarah Singkat -->
+    <section class="sejarah-section py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6 animate-fade-in">Sejarah Singkat Desa</h2>
+            <div class="sejarah-content space-y-4 animate-slide-up text-justify leading-relaxed">
+                <p class="text-gray-600 leading-relaxed text-center">
+                    Desa Purworejo memiliki sejarah panjang yang bermula pada tahun 1945, tepat setelah kemerdekaan Indonesia. Awalnya, desa ini merupakan wilayah pertanian tradisional yang dihuni oleh masyarakat agraris. Perjalanan panjang ini ditandai dengan semangat gotong royong, kebersamaan, dan adaptasi terhadap perubahan zaman, menjadikan Desa Purworejo sebagai contoh desa pembangunan yang berkelanjutan.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Potensi Desa -->
+    <section class="potensi-preview py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-center animate-fade-in">Potensi Desa</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="potensi-item p-6 bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 animate-slide-up">
+                    <i class="fas fa-leaf text-green-500 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Pertanian</h3>
+                    <p>Sawah produktif dan perkebunan unggulan</p>
+                </div>
+                <div class="potensi-item p-6 bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 animate-slide-up">
+                    <i class="fas fa-mountain text-green-500 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Pariwisata</h3>
+                    <p>Keindahan alam dan budaya yang menarik</p>
+                </div>
+                <div class="potensi-item p-6 bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 animate-slide-up">
+                    <i class="fas fa-industry text-green-500 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">UMKM</h3>
+                    <p>Kerajinan dan produk lokal berkualitas</p>
+                </div>
+                <div class="potensi-item p-6 bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 animate-slide-up">
+                    <i class="fas fa-tractor text-green-500 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Peternakan</h3>
+                    <p>Pengembangan ternak modern</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-gray-300 py-10">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Section: Kontak Kami -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Kontak Kami</h3>
+                <div class="space-y-4">
+                    <p class="text-white hover:text-green-400">Alamat: Jl. WR Supratman No.431, Dusun II, Cangkreplor, Kec. Purworejo, Kabupaten Purworejo, Jawa Tengah 54117</p>
+                    <p class="text-white hover:text-green-400">Telepon: 0812-3456-7890</p>
+                    <p>Email: <a href="mailto:info@desapurworejo.desa.id" class="text-white hover:underline">info@desapurworejo.desa.id</a></p>
+                </div>
+            </div>
+            
+            <!-- Section: Sosial Media -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Sosial Media</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-green-400"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-white hover:text-green-400"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-white hover:text-green-400"><i class="fab fa-youtube fa-2x"></i></a>
+                </div>
+            </div>
+            
+            <!-- Section: Newsletter -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Berlangganan</h3>
+                <form id="newsletter-form" class="flex flex-col space-y-4">
+                    <input 
+                        type="email" 
+                        placeholder="Email Anda" 
+                        required 
+                        class="p-2 rounded bg-green-700 border border-green-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    >
+                    <button 
+                        type="submit" 
+                        class="bg-green-800 text-white py-2 rounded hover:bg-green-900 transition">
+                        Berlangganan
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="border-t border-green-700 mt-8 pt-6 text-center">
+            <p class="text-md text-white">© 2024 Desa Purworejo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

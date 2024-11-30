@@ -1,0 +1,124 @@
+/* Page Header Styling */
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('placeholder-header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+    margin-top: 60px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+}
+
+/* Sejarah Section */
+.section-sejarah {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.sejarah-detail {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sejarah-detail img {
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.sejarah-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Struktur Section */
+.section-struktur {
+    padding: 4rem 0;
+    background-color: var(--background-color);
+}
+
+.struktur-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.struktur-card {
+    background-color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.struktur-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Demografi Section */
+.section-demografi {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.demografi-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.demografi-stats {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background-color: var(--background-color);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.demografi-chart {
+    flex: 1;
+    text-align: center;
+}
+
+.demografi-chart canvas {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Responsive Design for Informasi */
+@media (max-width: 768px) {
+    .sejarah-detail, .demografi-content {
+        flex-direction: column;
+    }
+
+    .struktur-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .demografi-stats {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,60 @@
+/* Page Header Styling */
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('placeholder-umkm-header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+    margin-top: 60px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+}
+
+/* UMKM Produk Section */
+.section-umkm {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.produk-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.produk-card:hover {
+    transform: translateY(-10px);
+}
+
+.produk-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.produk-card h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.produk-card p {
+    padding: 0 1rem 1rem;
+}

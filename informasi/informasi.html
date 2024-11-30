@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Desa - Desa Purworejo</title>
+    <link rel="stylesheet" href="informasi.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="bg-green-600 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="logo text-xl font-bold">
+                <a href="/index.html" class="hover:text-gray-200 transition-colors">Desa Purworejo</a>
+            </div>
+
+            <!-- Hamburger Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="hamburger" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Menu Links -->
+            <ul id="navbar-links" class="hidden md:flex md:space-x-4 absolute md:static top-16 left-0 bg-green-600 md:bg-transparent w-full md:w-auto z-10 md:z-auto shadow-lg md:shadow-none flex-col md:flex-row">
+                <li class="border-b md:border-none"><a href="/index.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Beranda</a></li>
+                <li class="border-b md:border-none"><a href="/informasi/informasi.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Informasi Desa</a></li>
+                <li class="border-b md:border-none"><a href="/layanan/layanan.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Layanan Publik</a></li>
+                <li class="border-b md:border-none"><a href="/wisata/wisata.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Wisata Desa</a></li>
+                <li class="border-b md:border-none"><a href="/umkm/umkm.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">UMKM</a></li>
+                <li><a href="/forum/forum.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Forum</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="relative bg-cover bg-center h-80" style="background-image: url('/assets/header.webp');">
+        <div class="absolute inset-0 bg-black bg-opacity-50">
+            <div class="container mx-auto h-full flex flex-col justify-center items-center text-center text-white">
+                <h1 class="text-4xl font-bold drop-shadow-lg">Informasi Desa Purworejo</h1>
+                <p class="mt-2 text-lg font-medium drop-shadow-md">Mengenal Lebih Dekat Desa Kami</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sejarah Lengkap -->
+    <section class="section-sejarah py-16 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-extrabold text-center text-gray-800">Sejarah Desa</h2>
+            <div class="mt-8 grid md:grid-cols-2 gap-8">
+                <div>
+                    <img src="/assets/header-bg.jpg" alt="Sejarah Desa" class="rounded-lg shadow-lg">
+                </div>
+                <div>
+                    <p class="mt-4 text-gray-600 leading-relaxed text-justify">Desa Purworejo memiliki sejarah panjang yang bermula sejak era perjuangan kemerdekaan Indonesia pada tahun 1945. Awalnya, desa ini merupakan kawasan agraris yang penduduknya sebagian besar bergantung pada sektor pertanian. Dengan tanah yang subur dan sistem irigasi tradisional yang dikelola secara bergotong royong, Desa Purworejo dikenal sebagai salah satu lumbung padi di daerah tersebut.</p>
+                
+                    <p class="mt-4 text-gray-600 leading-relaxed text-justify">Seiring waktu, masyarakat Desa Purworejo mulai memperluas bidang usaha mereka. Pada tahun 1970-an, diperkenalkan berbagai program pemberdayaan ekonomi berbasis komunitas oleh pemerintah daerah. Hal ini mencakup pengembangan koperasi, pelatihan keterampilan, dan diversifikasi hasil pertanian seperti tanaman perkebunan serta produk kerajinan tangan. Pada dekade ini pula, infrastruktur dasar seperti jalan desa dan sekolah pertama kali dibangun, memberikan akses lebih baik bagi masyarakat.</p>
+                    
+                    <p class="mt-4 text-gray-600 leading-relaxed text-justify">Masuk ke era reformasi tahun 2000-an, Desa Purworejo mengalami transformasi sosial dan ekonomi yang signifikan. Dengan dukungan pemerintah dan organisasi non-pemerintah, desa ini mulai fokus pada pariwisata dan usaha mikro kecil menengah (UMKM). Berbagai program pelatihan dan pendanaan diberikan untuk mendukung usaha warga, seperti produksi batik khas desa, pengolahan hasil bumi, serta pengembangan homestay untuk wisatawan.</p>
+                                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Struktur Pemerintahan -->
+    <section class="section-struktur py-16 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-extrabold text-center text-gray-800">Struktur Pemerintahan Desa</h2>
+            <p class="text-center text-gray-500 mt-4">Struktur pemerintahan Desa Purworejo yang terdiri dari beberapa perangkat untuk mendukung kemajuan desa.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <!-- Kepala Desa -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition text-center py-8 px-4">
+                    <i class="fas fa-user-tie fa-4x text-green-600"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Kepala Desa</h3>
+                    <p class="text-gray-600 mt-2">Pemimpin dan koordinator utama pembangunan desa.</p>
+                </div>
+                <!-- Sekretaris Desa -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition text-center py-8 px-4">
+                    <i class="fas fa-file-alt fa-4x text-green-600"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Sekretaris Desa</h3>
+                    <p class="text-gray-600 mt-2">Bertanggung jawab atas administrasi dan kesekretariatan.</p>
+                </div>
+                <!-- Kepala Urusan Pemerintahan -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition text-center py-8 px-4">
+                    <i class="fas fa-landmark fa-4x text-green-600"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Kepala Urusan Pemerintahan</h3>
+                    <p class="text-gray-600 mt-2">Mengelola administrasi pemerintahan desa.</p>
+                </div>
+                <!-- Kepala Urusan Pembangunan -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition text-center py-8 px-4">
+                    <i class="fas fa-tools fa-4x text-green-600"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Kepala Urusan Pembangunan</h3>
+                    <p class="text-gray-600 mt-2">Mengkoordinasikan kegiatan pembangunan desa.</p>
+                </div>
+                <!-- Kepala Urusan Kesejahteraan -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition text-center py-8 px-4">
+                    <i class="fas fa-heart fa-4x text-green-600"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Kepala Urusan Kesejahteraan</h3>
+                    <p class="text-gray-600 mt-2">Bertanggung jawab atas kesejahteraan sosial warga desa.</p>
+                </div>
+                <!-- Kepala Dusun -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition text-center py-8 px-4">
+                    <i class="fas fa-users fa-4x text-green-600"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Kepala Dusun</h3>
+                    <p class="text-gray-600 mt-2">Mengelola administrasi dan pembangunan di tingkat dusun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demografi -->
+    <section class="section-demografi py-16 bg-gradient-to-b from-green-50 to-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-extrabold text-center text-gray-800">Data Demografi</h2>
+            <p class="text-center text-gray-500 mt-4">Menampilkan data statistik dan grafik penduduk Desa Purworejo.</p>
+            <div class="mt-12 grid lg:grid-cols-2 gap-10">
+                <!-- Statistik -->
+                <div class="grid sm:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105">
+                        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600">
+                            <i class="fas fa-users fa-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mt-6 text-gray-800">Jumlah Penduduk</h3>
+                        <p class="text-lg text-gray-600 mt-2">795.033 Jiwa</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105">
+                        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600">
+                            <i class="fas fa-home fa-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mt-6 text-gray-800">Jumlah KK</h3>
+                        <p class="text-lg text-gray-600 mt-2">215.372 Kepala Keluarga</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105">
+                        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600">
+                            <i class="fas fa-venus-mars fa-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mt-6 text-gray-800">Jenis Kelamin</h3>
+                        <p class="text-lg text-gray-600 mt-2">Laki-laki: 398.135 | Perempuan: 396.898</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105">
+                        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600">
+                            <i class="fas fa-graduation-cap fa-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mt-6 text-gray-800">Pendidikan</h3>
+                        <p class="text-lg text-gray-600 mt-2">
+                            SD: 40% | SMP: 25% | SMA: 20% | Perguruan Tinggi: 15%
+                        </p>
+                    </div>
+                </div>
+                <!-- Grafik -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-gray-800">Grafik Usia Penduduk</h3>
+                    <p class="text-gray-600 mt-2">Distribusi usia penduduk berdasarkan kategori umur.</p>
+                    <canvas id="ageChart" class="mt-6"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-gray-300 py-10">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Section: Kontak Kami -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Kontak Kami</h3>
+                <div class="space-y-4">
+                    <p class="text-white hover:text-green-400">Alamat: Jl. WR Supratman No.431, Dusun II, Cangkreplor, Kec. Purworejo, Kabupaten Purworejo, Jawa Tengah 54117</p>
+                    <p class="text-white hover:text-green-400">Telepon: 0812-3456-7890</p>
+                    <p>Email: <a href="mailto:info@desapurworejo.desa.id" class="text-white hover:underline">info@desapurworejo.desa.id</a></p>
+                </div>
+            </div>
+            
+            <!-- Section: Sosial Media -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Sosial Media</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-green-400"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-white hover:text-green-400"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-white hover:text-green-400"><i class="fab fa-youtube fa-2x"></i></a>
+                </div>
+            </div>
+            
+            <!-- Section: Newsletter -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Berlangganan</h3>
+                <form id="newsletter-form" class="flex flex-col space-y-4">
+                    <input 
+                        type="email" 
+                        placeholder="Email Anda" 
+                        required 
+                        class="p-2 rounded bg-green-700 border border-green-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    >
+                    <button 
+                        type="submit" 
+                        class="bg-green-800 text-white py-2 rounded hover:bg-green-900 transition">
+                        Berlangganan
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="border-t border-green-700 mt-8 pt-6 text-center">
+            <p class="text-md text-white">© 2024 Desa Purworejo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
