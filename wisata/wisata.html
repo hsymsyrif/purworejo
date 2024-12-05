@@ -1,169 +1,161 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wisata Desa - Desa Purworejo</title>
-    <link rel="stylesheet" href="wisata.css">
+    <link rel="stylesheet" href="wisata.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
-<body>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  </head>
+  <body>
     <!-- Navigation -->
-    <nav id="navbar" class="bg-green-600 text-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
-            <!-- Logo -->
-            <div class="logo text-xl font-bold">
-                <a href="/index.html" class="hover:text-gray-200 transition-colors">Desa Purworejo</a>
-            </div>
-
-            <!-- Hamburger Menu Button -->
-            <div class="md:hidden flex items-center">
-                <button id="hamburger" class="text-white focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-
-            <!-- Menu Links -->
-            <ul id="navbar-links" class="hidden md:flex md:space-x-4 absolute md:static top-16 left-0 bg-green-600 md:bg-transparent w-full md:w-auto z-10 md:z-auto shadow-lg md:shadow-none flex-col md:flex-row">
-                <li class="border-b md:border-none"><a href="/index.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Beranda</a></li>
-                <li class="border-b md:border-none"><a href="/informasi/informasi.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Informasi Desa</a></li>
-                <li class="border-b md:border-none"><a href="/layanan/layanan.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Layanan Publik</a></li>
-                <li class="border-b md:border-none"><a href="/wisata/wisata.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Wisata Desa</a></li>
-                <li class="border-b md:border-none"><a href="/umkm/umkm.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">UMKM</a></li>
-                <li><a href="/forum/forum.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Forum</a></li>
-            </ul>
+    <nav id="navbar" class="bg-green-600 text-white shadow-lg fixed w-full z-50">
+      <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="logo text-xl font-bold">
+          <a href="/index.html" class="hover:text-gray-200 transition-colors">Desa Purworejo</a>
         </div>
+
+        <!-- Hamburger Menu Button -->
+        <div class="md:hidden flex items-center">
+          <button id="hamburger" class="text-white focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- Menu Links -->
+        <ul id="navbar-links" class="hidden md:flex md:space-x-4 absolute md:static top-16 left-0 bg-green-600 md:bg-transparent w-full md:w-auto z-10 md:z-auto shadow-lg md:shadow-none flex-col md:flex-row">
+          <li class="border-b md:border-none"><a href="/index.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Beranda</a></li>
+          <li class="border-b md:border-none"><a href="/informasi/informasi.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Informasi Desa</a></li>
+          <li class="border-b md:border-none"><a href="/layanan/layanan.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Layanan Publik</a></li>
+          <li class="border-b md:border-none"><a href="/wisata/wisata.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Wisata Desa</a></li>
+          <li class="border-b md:border-none"><a href="/umkm/umkm.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">UMKM</a></li>
+          <li><a href="/forum/forum.html" class="block py-4 px-4 text-center hover:bg-green-700 md:hover:bg-transparent transition-colors">Forum</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Header -->
-    <header class="relative bg-cover bg-center h-80" style="background-image: url('/assets/header.webp');">
-        <div class="absolute inset-0 bg-black bg-opacity-50">
-            <div class="container mx-auto h-full flex flex-col justify-center items-center text-center text-white">
-                <h1 class="text-4xl font-bold drop-shadow-lg">Wisata Desa Purworejo</h1>
-                <p class="mt-2 text-lg font-medium drop-shadow-md">Keindahan Alam dan Budaya Kami</p>
-            </div>
+    <header class="relative bg-cover bg-center h-96" style="background-image: url('/assets/header.webp')">
+      <div class="absolute inset-0 bg-black bg-opacity-50">
+        <div class="container mx-auto mt-10 h-full flex flex-col justify-center items-center text-center text-white">
+          <h1 class="text-4xl font-bold drop-shadow-lg">Wisata Desa Purworejo</h1>
+          <p class="mt-2 text-lg font-medium drop-shadow-md">Keindahan Alam dan Budaya Kami</p>
         </div>
+      </div>
     </header>
 
     <!-- Destinasi Wisata -->
     <section id="destinasi" class="section-destinasi bg-gray-50 py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">
-                Destinasi Wisata
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="destinasi-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-                    <img src="/assets/placeholder-wisata-1.webp" alt="Wisata Alam" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Wisata Alam</h3>
-                        <p class="text-gray-600">Keindahan pegunungan dan sungai yang asri.</p>
-                    </div>
-                </div>
-                <div class="destinasi-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-                    <img src="/assets/placeholder-wisata-2.webp" alt="Cagar Budaya" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Cagar Budaya</h3>
-                        <p class="text-gray-600">Warisan budaya dan sejarah desa.</p>
-                    </div>
-                </div>
-                <div class="destinasi-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
-                    <img src="/assets/placeholder-wisata-3.webp" alt="Kuliner Khas" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Kuliner Khas</h3>
-                        <p class="text-gray-600">Nikmati masakan khas Desa Purworejo.</p>
-                    </div>
-                </div>
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Destinasi Wisata</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="destinasi-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+            <img src="/assets/placeholder-wisata-1.webp" alt="Wisata Alam" class="w-full h-64 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-3">Wisata Alam</h3>
+              <p class="text-gray-600">Keindahan pegunungan dan sungai yang asri.</p>
             </div>
+          </div>
+          <div class="destinasi-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+            <img src="/assets/placeholder-wisata-2.webp" alt="Cagar Budaya" class="w-full h-64 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-3">Cagar Budaya</h3>
+              <p class="text-gray-600">Warisan budaya dan sejarah desa.</p>
+            </div>
+          </div>
+          <div class="destinasi-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+            <img src="/assets/placeholder-wisata-3.webp" alt="Kuliner Khas" class="w-full h-64 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-3">Kuliner Khas</h3>
+              <p class="text-gray-600">Nikmati masakan khas Desa Purworejo.</p>
+            </div>
+          </div>
+          <div class="destinasi-card bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+            <img src="/assets/placeholder-wisata-4.webp" alt="Kuliner Khas" class="w-full h-64 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-3">Wisata Renang</h3>
+              <p class="text-gray-600">Kolam renang yang jernih dengan harga terjangkau</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Event Desa -->
-    <section class="section-event bg-white py-16 transition-all duration-500 ease-in-out transform hover:scale-105">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10 tracking-wide">
-                Event Desa
-            </h2>
-            <div class="space-y-6">
-                <!-- Event Card 1 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-xl flex items-center justify-between hover:bg-gray-200 transform transition duration-300 ease-in-out hover:scale-105">
-                    <span class="text-lg font-semibold text-gray-800">Festival Seni Budaya</span>
-                    <span class="text-gray-500 text-sm">15 Desember 2024</span>
-                </div>
-                <!-- Event Card 2 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-xl flex items-center justify-between hover:bg-gray-200 transform transition duration-300 ease-in-out hover:scale-105">
-                    <span class="text-lg font-semibold text-gray-800">Lomba Memasak Tradisional</span>
-                    <span class="text-gray-500 text-sm">20 Januari 2025</span>
-                </div>
-                <!-- Event Card 3 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-xl flex items-center justify-between hover:bg-gray-200 transform transition duration-300 ease-in-out hover:scale-105">
-                    <span class="text-lg font-semibold text-gray-800">Karnaval Adat Desa</span>
-                    <span class="text-gray-500 text-sm">5 Februari 2025</span>
-                </div>
-            </div>
+    <section class="section-event bg-white py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-10 tracking-wide">Event Desa</h2>
+        <div class="space-y-6">
+          <!-- Event Card 1 -->
+          <div class="bg-gray-100 p-6 rounded-lg shadow-xl flex items-center justify-between hover:bg-gray-200 transform transition duration-300 ease-in-out hover:scale-105">
+            <span class="text-lg font-semibold text-gray-800">Festival Seni Budaya</span>
+            <span class="text-gray-500 text-sm">15 Desember 2024</span>
+          </div>
+          <!-- Event Card 2 -->
+          <div class="bg-gray-100 p-6 rounded-lg shadow-xl flex items-center justify-between hover:bg-gray-200 transform transition duration-300 ease-in-out hover:scale-105">
+            <span class="text-lg font-semibold text-gray-800">Lomba Memasak Tradisional</span>
+            <span class="text-gray-500 text-sm">20 Januari 2025</span>
+          </div>
+          <!-- Event Card 3 -->
+          <div class="bg-gray-100 p-6 rounded-lg shadow-xl flex items-center justify-between hover:bg-gray-200 transform transition duration-300 ease-in-out hover:scale-105">
+            <span class="text-lg font-semibold text-gray-800">Karnaval Adat Desa</span>
+            <span class="text-gray-500 text-sm">5 Februari 2025</span>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Peta Wisata -->
     <section class="section-map bg-gray-50 py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">
-                Peta Wisata
-            </h2>
-            <div id="map" class="w-full h-96 rounded-lg shadow-lg overflow-hidden"></div>
-        </div>
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Peta Wisata</h2>
+        <div id="map" class="w-full h-96 rounded-lg shadow-lg overflow-hidden"></div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-green-600 text-gray-300 py-10">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Section: Kontak Kami -->
-            <div>
-                <h3 class="text-lg font-semibold text-white mb-4">Kontak Kami</h3>
-                <div class="space-y-4">
-                    <p class="text-white hover:text-green-400">Alamat: Jl. WR Supratman No.431, Dusun II, Cangkreplor, Kec. Purworejo, Kabupaten Purworejo, Jawa Tengah 54117</p>
-                    <p class="text-white hover:text-green-400">Telepon: 0812-3456-7890</p>
-                    <p>Email: <a href="mailto:info@desapurworejo.desa.id" class="text-white hover:underline">info@desapurworejo.desa.id</a></p>
-                </div>
-            </div>
-            
-            <!-- Section: Sosial Media -->
-            <div>
-                <h3 class="text-lg font-semibold text-white mb-4">Sosial Media</h3>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-white hover:text-green-400"><i class="fab fa-facebook fa-2x"></i></a>
-                    <a href="#" class="text-white hover:text-green-400"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="#" class="text-white hover:text-green-400"><i class="fab fa-youtube fa-2x"></i></a>
-                </div>
-            </div>
-            
-            <!-- Section: Newsletter -->
-            <div>
-                <h3 class="text-lg font-semibold text-white mb-4">Berlangganan</h3>
-                <form id="newsletter-form" class="flex flex-col space-y-4">
-                    <input 
-                        type="email" 
-                        placeholder="Email Anda" 
-                        required 
-                        class="p-2 rounded bg-green-700 border border-green-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                    >
-                    <button 
-                        type="submit" 
-                        class="bg-green-800 text-white py-2 rounded hover:bg-green-900 transition">
-                        Berlangganan
-                    </button>
-                </form>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Section: Kontak Kami -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Kontak Kami</h3>
+          <div class="space-y-4">
+            <p class="text-white hover:text-green-400">Alamat: Jalan Utama No.3 Desa Purworejo Kec. Ringinarum Kab. Kendal</p>
+            <p class="text-white hover:text-green-400">Telepon: 089637955545 (Pemdes)</p>
+            <p>Email: <a href="mailto:desapurworejo11@gmail.com" class="text-white hover:underline">desapurworejo11@gmail.com</a></p>
+          </div>
         </div>
-        <div class="border-t border-green-700 mt-8 pt-6 text-center">
-            <p class="text-md text-white">© 2024 Desa Purworejo. All Rights Reserved.</p>
+
+        <!-- Section: Sosial Media -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Sosial Media</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white hover:text-green-400"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="text-white hover:text-green-400"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#" class="text-white hover:text-green-400"><i class="fab fa-youtube fa-2x"></i></a>
+          </div>
         </div>
+
+        <!-- Section: Newsletter -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Berlangganan</h3>
+          <form id="newsletter-form" class="flex flex-col space-y-4">
+            <input type="email" placeholder="Email Anda" required class="p-2 rounded bg-green-700 border border-green-600 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+            <button type="submit" class="bg-green-800 text-white py-2 rounded hover:bg-green-900 transition">Berlangganan</button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-green-700 mt-8 pt-6 text-center">
+        <p class="text-md text-white">© 2024 Desa Purworejo. All Rights Reserved.</p>
+      </div>
     </footer>
 
-    <script src="/script.js"></script>    
+    <script src="/script.js"></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="wisata.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-</body>
+  </body>
 </html>
